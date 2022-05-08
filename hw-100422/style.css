@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+:root {
+    --firstColor: rgb(22, 74, 87);
+    --secondColor: rgb(255, 255, 255);
+}
+
+.cHeader {
+    background-image: url('https://media.istockphoto.com/photos/moraine-lake-picture-id525154857?k=20&m=525154857&s=612x612&w=0&h=xGEbqRl8b2f7AIs9a32o6FQWlCAwJ4MQUiO0YDF4PMU=');
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--secondColor);
+    overflow: auto;
+}
+
+.cSection {
+    margin-top: 20vh;
+}
+
+.cH1 {
+    font-size: 64px;
+}
+
+.cH4 {
+    font-size: 36px;
+}
+
+.cBtn {
+    border: 1px solid var(--secondColor);
+    border-radius: 10px;
+    width: 175px;
+    height: 65px;
+    margin: 2% auto;
+    text-align: center;
+    line-height: 65px;
+}
+
+.cArtCommon {
+    width: 100%;
+    height: 20vh;
+    position: relative
+}
+
+.cArt1 {
+    color: var(--secondColor);
+    background-color: var(--firstColor);
+}
+
+.cArt2 {
+    color: var(--firstColor);
+    background-color: var(--secondColor);
+}
+
+.cArtCommon > p{
+    position: absolute;
+    top: 50%;         
+    transform: translate(0, -50%)
+}
