@@ -34,7 +34,6 @@ body{
 }
 
 .container_styles{
-    border: 1px solid white;
     border-radius: var(--radius);
     display: flex;
     flex-direction: column;
@@ -85,7 +84,9 @@ header > p {
 }
 
 .user_img_container{
-    width:fit-content;
+    /* width:fit-content; */
+    width: 215px;
+    height: 215px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -101,18 +102,26 @@ header > p {
     color: rgb(96,96,96);
 }
 
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
 h1{
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 200;
     text-align: center;
     margin: 10px auto 10px;
+    letter-spacing: -0.5px;
 }
 
 .artMain_styles{
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     text-align: center;
-    margin: 0px 50px;
+    margin: 0px 75px;
+    letter-spacing: -0.5px;
 }
 
 .btnFollow{
@@ -126,6 +135,7 @@ h1{
     color: white;
     margin: 40px auto 20px;
     display: flex;
+    box-shadow: 0px 3px var(--headerTextColor);
 }
 
 .btnFollow > p{
@@ -138,9 +148,48 @@ footer{
 }
 
 .foot_styles{
-    border: 1px solid red;
     border-radius:  0px 0px var(--radius) var(--radius);
     display: flex;
     flex-direction: row;
-    background-color: navy;
+    justify-content:center;
+    background-color: rgb(20, 20, 75);
+    align-items: center;
 }
+
+footer > section + section {
+    border-right: 1px solid var(--headerTextColor);
+    border-left: 1px solid var(--headerTextColor);
+}
+
+footer > section {
+    flex-basis: 33.33%;
+    color: var(--headerTextColor);
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 100%;
+}
+
+footer a {
+    color: var(--headerTextColor);
+    font-size: 24px;
+    flex-basis: 40%;
+    padding-left: 15px; */
+}
+
+footer article {
+    color: var(--headerTextColor);
+    font-size: 12px;
+    flex-basis: 60%;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255, 255, 255,0.8);
+}
+
+
+
+
+
