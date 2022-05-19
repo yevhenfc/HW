@@ -35,7 +35,8 @@ while (minLim++ <= maxLim) (minLim - 1) % multNumb ? 1 : console.log(minLim - 1)
 function multSeries(minLim = parseInt(prompt('Нижняя граница =', 5), 10)
                    ,maxLim = parseInt(prompt('Верхняя граница =', 12), 10)){
 let result = 1;
-for(minLim; minLim <= maxLim; minLim ++) result *= minLim;  
+//for(minLim; minLim <= maxLim; minLim ++) result *= minLim;  
+while (minLim++ <= maxLim) result *= (minLim - 1);  
 console.log(result);
 };
 //-------------------------------------------------------------------------------------------------
