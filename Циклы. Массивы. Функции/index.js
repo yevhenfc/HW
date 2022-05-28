@@ -1,16 +1,15 @@
 //-------------------------------------------------------------------------------------------------
 // проверка выбора
-// let checkChoice = (taskChoice, messageChoice, fun) =>  Number.isInteger(taskChoice) == true ? true : (alert(messageChoice), fun*);
+// let checkChoice = (taskChoice, messageChoice, fun) =>  Number.isInteger(taskChoice) == true ? true : (alert(messageChoice), fun);
 
 // 1. showStars
-let showStars = (numberStars = prompt('Enter number of stars ', 1)) => {
-
+let showSymb = (numberSymb = prompt('Enter number of stars ', 1)
+                ,Symb = '*') => {
 // checkChoice(numberStars,'An integer [1-6] is required',showStars());
-
 let res = '', i = 0;
-while (i++ < numberStars) res +='*';
+while (i++ < numberSymb) res +=Symb;
 return (res);
-//return("*".repeat(numberStars));
+//return("*".repeat(numberSymb));
 };
 
 // 2. Multiplicity
@@ -22,13 +21,12 @@ for (minLim; minLim <= maxLim; ++minLim){ minLim % multNumb ? 1 : res += `${minL
 return(res);
 };
 
-let arr = [1,20,3,17,6,13,9,10,12,7];
 //-------------------------------------------------------------------------------------------------
 // 3. getEvenElSum
 let getEvenElSum = (arr) => {
 let res = 0, i = 0;
 for (i; i < arr.length; i++) arr[i] % 2 ? 1 : res += arr[i];
-return(res);
+return(`Sum of even elements ${res}`);
 }
 //-------------------------------------------------------------------------------------------------
 // 4. showZeroLessTen
@@ -38,32 +36,30 @@ let showZeroLessTen = (arrS) => {
 };
 //-------------------------------------------------------------------------------------------------
 // 5. addZero
-let getSign = (val) => {
-    sign = '', len = 0;
-    val < 0 ? (sign += '-', len=`${val}`.length-1): len=`${val}`.length;
-    return sign, len;
+let preCalc = (val) => {
+    sign = '', len = 0, num = Math.abs(val);
+    val < 0 ? (sign += '-', len=`${val}`.length - 1): len=`${val}`.length;
+    return {sign, len, num};
 };
+
+let calcZero = (len, userLen) => showSymb(userLen-len,'0'); 
 
 let addZero = (userNum = prompt('Enter number =', -4)
-              ,userLen = prompt('Enter length =', 6)) => {
-let res = getSign(userNum);            
-
-
-for (i = 0; i < arrS.length; i++) arrS[i] < 10 ? arrS[i] = 0: 0;
-return arrS;
+              ,userLen = prompt('Enter length =', 6)) => preCalc(userNum).sign + calcZero(preCalc(userNum).len, userLen) + preCalc(userNum).num;
+//-------------------------------------------------------------------------------------------------
+// 6. getArrConc
+let getArrConc = (arr1,arr2) => {
+res = [];
+for(i = 0; i < arr1.length; i++) res[i] = arr1[i];  
+for(j = 0; j < arr2.length; j++) res[i + j] = arr2[j];  
+return res;
 };
-// //-------------------------------------------------------------------------------------------------
-// // 5. умножение
-// function multSeries(minLim = parseInt(prompt('Нижняя граница =', 5), 10)
-//                    ,maxLim = parseInt(prompt('Верхняя граница =', 12), 10)){
-// let result = 1;
-// //for(minLim; minLim <= maxLim; minLim ++) result *= minLim;  
-// while (minLim++ <= maxLim) result *= (minLim - 1);  
-// console.log(result);
-// };
 
 //-------------------------------------------------------------------------------------------------
 // меню
+let arr = [1,20,3,17,6,13,9,10,12,7]; 
+let arr2 = ['a','s','d','f','g','q','w','e','r','t','y'];
+
 function hwMenu(taskChoice = parseInt(prompt(`1. Вывести знак * столько раз сколько задаст пользователь 
                                             \n2. Вывод чисел от limit1 до limit2, которые кратны num
                                             \n3. Сумма четных элементов массива
@@ -73,12 +69,12 @@ function hwMenu(taskChoice = parseInt(prompt(`1. Вывести знак * ст�
                                             \nВыберите номер задания (1-6)`), 10)){
 //checkChoice(taskChoice,'необходимо число (1-6)',hwMenu());
 switch (taskChoice) {
-    case 1: console.log(showStars());  break;
+    case 1: console.log(showSymb());  break;
     case 2: console.log(getMultNumber());  break;
     case 3: console.log(getEvenElSum(arr)); break;
     case 4: console.log(showZeroLessTen(arr));  break;
-    case 5: console.log(getSign(-4));  break;
-    case 5: multSeries(); 
+    case 5: console.log(addZero());  break;
+    case 6: console.log(getArrConc(arr,arr2)); 
     }
 }
 //-------------------------------------------------------------------------------------------------
