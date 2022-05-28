@@ -39,15 +39,14 @@ let showZeroLessTen = (arrS) => {
 //-------------------------------------------------------------------------------------------------
 // 5. addZero
 let getSign = (val) => {
-    res = '';
-    val < 0 ? res += '-' : true;
-    return res;
+    sign = '', len = 0;
+    val < 0 ? (sign += '-', len=`${val}`.length-1): len=`${val}`.length;
+    return sign, len;
 };
-
 
 let addZero = (userNum = prompt('Enter number =', -4)
               ,userLen = prompt('Enter length =', 6)) => {
-let res = '';            
+let res = getSign(userNum);            
 
 
 for (i = 0; i < arrS.length; i++) arrS[i] < 10 ? arrS[i] = 0: 0;
