@@ -15,29 +15,21 @@ let getReduce3Per = (arr) => {
 //-------------------------------------------------------------------------------------------------
 // 4. getIncr3Per
 let getIncr3Per = (arr) => {
-    arr.forEach((el, i, arr) => el < 100 ? arr[i] *= 1.05 : 1); 
+    // arr.forEach((el, i, arr) => el < 100 ? arr[i] *= 1.05 : 1); 
+    arr.forEach((el, i, arr) => (el < 100 && el >= 0) ? arr[i] *= 1.05 : (el < 100) ? arr[i] *= .95 : 1); 
     return arr
 }
 //-------------------------------------------------------------------------------------------------
-// 5. addZero
-let preCalc = (val) => {
-    sign = '', len = 0, num = Math.abs(val);
-    val < 0 ? (sign += '-', len=`${val}`.length - 1): len=`${val}`.length;
-    return {sign, len, num};
-};
+// 5. getPalindrom
+let getPalindrom = (word = prompt('Enter word','abcddcba')) => word == word.split('').reverse().join('') ? 
+                                                               `'${word}'` + " is polindrom" : 
+                                                               `'${word}'` + " isn't polindrom";
 
-let calcZero = (len, userLen) => showSymb(userLen-len,'0'); 
 
-let addZero = (userNum = prompt('Enter number =', -4)
-              ,userLen = prompt('Enter length =', 6)) => preCalc(userNum).sign + calcZero(preCalc(userNum).len, userLen) + preCalc(userNum).num;
-//----------------------------let getSumLess100 = (arr) => arr.filter(el => el < 100).reduce((accum, val) => accum + val);
 //---------------------------------------------------------------------
-// 6. getArrConc
-let getArrConc = (arr1,arr2) => {
-arrLen = arr1.length;
-for(i = 0; i < arr2.length; i++) arr1[i + arrLen] = arr2[i];  
-return arr1;
-};
+// 6. getTwoStrReverse
+let getTwoStrReverse = (str1 = prompt('Enter string1', 'qwerty'),
+                        str2 = prompt('Enter string2', 'йцуке')) =>  (str1 + str2).split('').reverse().join('')
 
 //-------------------------------------------------------------------------------------------------
 // меню
@@ -56,8 +48,8 @@ switch (taskChoice) {
     case 2: console.log(getSumLess100(arr));  break;
     case 3: console.log(getReduce3Per(arr)); break;
     case 4: console.log(getIncr3Per(arr));  break;
-    case 5: console.log(addZero());  break;
-    case 6: console.log(getArrConc(arr,arr2)); 
+    case 5: console.log(getPalindrom());  break;
+    case 6: console.log(getTwoStrReverse()); 
     }
 }
 //-------------------------------------------------------------------------------------------------
