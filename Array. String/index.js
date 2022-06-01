@@ -26,10 +26,23 @@ let getPalindrom = (word = prompt('Enter word','abcddcba')) => word == word.spli
                                                                `'${word}'` + " isn't polindrom";
 
 
-//---------------------------------------------------------------------
+//-------------------------------------------------------------------------------------------------
 // 6. getTwoStrReverse
 let getTwoStrReverse = (str1 = prompt('Enter string1', 'qwerty'),
                         str2 = prompt('Enter string2', 'йцуке')) =>  (str1 + str2).split('').reverse().join('')
+
+//-------------------------------------------------------------------------------------------------
+// 7. getUpperCase
+let getUpperCase = (str = prompt('Enter several words', 'qwe  asd zxc')) =>  
+str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
+/*
+^\w : first character of the string
+| : or
+\s\w : first character after whitespace
+(^\w|\s\w) Capture the pattern.
+g Flag: Match all occurrences.
+*/
+
 
 //-------------------------------------------------------------------------------------------------
 // меню
@@ -49,7 +62,8 @@ switch (taskChoice) {
     case 3: console.log(getReduce3Per(arr)); break;
     case 4: console.log(getIncr3Per(arr));  break;
     case 5: console.log(getPalindrom());  break;
-    case 6: console.log(getTwoStrReverse()); 
+    case 6: console.log(getTwoStrReverse()); break;
+    case 7: console.log(getUpperCase()); break;
     }
 }
 //-------------------------------------------------------------------------------------------------
