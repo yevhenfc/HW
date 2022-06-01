@@ -33,7 +33,22 @@ let getTwoStrReverse = (str1 = prompt('Enter string1', 'qwerty'),
 
 //-------------------------------------------------------------------------------------------------
 // 7. getUpperCase
-let getUpperCase = (str = prompt('Enter several words', 'qwe  asd zxc')) =>  
+let getUpperCase = (str = prompt('Enter several words', 'qwe  asd zxc')) => 
+// v.1
+// {
+// let arr = str.split(''), i;
+// arr[0] = arr[0].toUpperCase();
+// for (i = 1; i < arr.length; i++) arr[i - 1] == ' ' && arr[i] != ' ' ? arr[i] = arr[i].toUpperCase(): true;
+// return arr.join('');
+// }
+
+// v.2
+// {   
+// let arr = str.split(' ').map(el => {return el.charAt(0).toUpperCase() + el.substring(1).toLowerCase()});
+// return arr.join(' ');
+// }
+
+// v.3
 str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
 /*
 ^\w : first character of the string
@@ -42,6 +57,9 @@ str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
 (^\w|\s\w) Capture the pattern.
 g Flag: Match all occurrences.
 */
+// 7. getIndMinEl
+let getIndMinEl = (arr, userNum = prompt('Enter number of min elements', 2)) => 
+
 
 
 //-------------------------------------------------------------------------------------------------
@@ -64,6 +82,7 @@ switch (taskChoice) {
     case 5: console.log(getPalindrom());  break;
     case 6: console.log(getTwoStrReverse()); break;
     case 7: console.log(getUpperCase()); break;
+    case 8: console.log(getIndMinEl(arr)); break; 
     }
 }
 //-------------------------------------------------------------------------------------------------
