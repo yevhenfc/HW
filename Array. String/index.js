@@ -57,10 +57,8 @@ str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
 (^\w|\s\w) Capture the pattern.
 g Flag: Match all occurrences.
 */
-// 7. getIndMinEl
-let getIndMinEl = (arr, userNum = prompt('Enter number of min elements', 2)) => 
-
-
+// 8. getIndMinEl
+let getIndMinEl = (arr) => arr.reduce((acc, val, i, arr) => val >= arr[acc] ? acc : i, -1);
 
 //-------------------------------------------------------------------------------------------------
 // меню
@@ -87,7 +85,7 @@ switch (taskChoice) {
 }
 //-------------------------------------------------------------------------------------------------
 
-let arr = [101,20,-3,117,6,113,9,10,12,-7]; 
+let arr = [101,20,-3,-117,6,-117,9,10,12,-7]; 
 let arr2 = ['a','s','d','f','g','q','w','e','r','t','y'];
 
 hwMenu();
