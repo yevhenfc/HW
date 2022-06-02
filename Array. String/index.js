@@ -58,7 +58,9 @@ str.replace(/(^\w|\s\w)/g, m => m.toUpperCase());
 g Flag: Match all occurrences.
 */
 // 8. getIndMinEl
-let getIndMinEl = (arr) => arr.reduce((acc, val, i, arr) => val >= arr[acc] ? acc : i, -1);
+let getIndMinEl = (arr) => arr.map((e, i) => e == Math.min(...arr) ? i : undefined).filter(e => e)
+//arr.reduce((acc, val, i, arr) => val >= arr[acc] ? acc : i, -1);
+
 
 //-------------------------------------------------------------------------------------------------
 // меню
