@@ -84,13 +84,21 @@ let usersArr = [user1, user2, user3, user4];
 /*
 Task 3 Из полученого массива в задании 2 сделайте карту (map). в качестве ключа используйте логин
 */
-let getArrayMap = (arr) =>{
+let getArrayMap1 = (arr) => {
     let arrayMap = new Map(), i;
-    for (i = 0; i < arr.length; i++) arrayMap.set(arr[i].userName, arr[i].userPsw);
+    for (i = 0; i < arr.length; i++) arrayMap.set(arr[i].userName, arr[i]);
     return arrayMap;
-}
+};
 
-console.log(getArrayMap(usersArr));
+let getArrayMap2 = (arr) => {
+    let arrayMap = new Map();
+    arr.forEach((el, i)  => {arrayMap = arrayMap.set(el.userName, el)});
+    return arrayMap;
+};
+
+console.log(getArrayMap1(usersArr));
+console.log(getArrayMap2(usersArr));
+
 //-------------------------------------------------------------------------------------------------
 /*
 Task 4* разными способами решите вопрос соединения двух массивов без повторов
@@ -103,8 +111,11 @@ let getConcatSet3 = (arr1, arr2) => {
     arr1.push(...arr2);
     return Array.from(new Set(arr1));
 };
+let getConcatSet4 = (arr1, arr2) => [... new Set([...arr1, ...arr2])];
+let getConcatSet5 = (arr1, arr2) => [...arr1, ...arr2].filter((el, ind) => ind === [...arr1, ...arr2].indexOf(el));
 
-console.log(getConcatSet1(arr1, arr2));
-console.log(getConcatSet2(arr1, arr2));
-console.log(getConcatSet3(arr1, arr2));
-
+// console.log(getConcatSet1(arr1, arr2));
+// console.log(getConcatSet2(arr1, arr2));
+// console.log(getConcatSet3(arr1, arr2));
+// console.log(getConcatSet4(arr1, arr2));
+// console.log(getConcatSet5(arr1, arr2));
