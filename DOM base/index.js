@@ -29,4 +29,20 @@ arr.forEach(el => el.style.backgroundColor = '#' + Math.floor(Math.random()*1677
 //-------------------------------------------------------------------------------------------------
 // 3* по просьбе трудящихся :)
 // объект Товара (название, цена, другие характеристики ...) создайте карточку
+class Product{
+   constructor(prName, prCategory, prAge, prProducer){
+      this.prName     = prName;
+      this.prCategory = prCategory;
+      this.prAge      = prAge;
+      this.prProducer = prProducer;
+   }
+};
+
+let Prod1 = new Product('prName1','prCategory1','prAge1','prProducer1');
+let Prod2 = new Product('prName2','prCategory2','prAge2','prProducer2');
+let Prod3 = new Product('prName3','prCategory3','prAge3','prProducer3');
+let Prod4 = new Product('prName4','prCategory4','prAge4','prProducer4');
+
+let arrProd = [];
+arrProd.push(Prod1, Prod2, Prod3, Prod4);
 
