@@ -114,8 +114,8 @@ let getConcatSet3 = (arr1, arr2) => {
 let getConcatSet4 = (arr1, arr2) => [... new Set([...arr1, ...arr2])];
 let getConcatSet5 = (arr1, arr2) => [...arr1, ...arr2].filter((el, ind) => ind === [...arr1, ...arr2].indexOf(el));
 
-// console.log(getConcatSet1(arr1, arr2));
-// console.log(getConcatSet2(arr1, arr2));
-// console.log(getConcatSet3(arr1, arr2));
-// console.log(getConcatSet4(arr1, arr2));
-// console.log(getConcatSet5(arr1, arr2));
+console.log(getConcatSet1(arr1, arr2));
+console.log(getConcatSet2(arr1, arr2));
+console.log(getConcatSet3(arr1, arr2));
+console.log(getConcatSet4(arr1, arr2));
+console.log(getConcatSet5(arr1, arr2));
