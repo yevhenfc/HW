@@ -64,9 +64,9 @@ makeSlides(slideArr, 0, 4);
 
 setBackGroundImage();
 
-document.querySelectorAll('.divSlide').forEach((el, i, arr) => {
-    el.addEventListener('click', (event) => {
-        setWide(event.target.closest('.divSlide'))
+document.querySelectorAll('.divSlide').forEach((el) => {
+    el.addEventListener('click', (ev) => {
+        setWide(ev.target.closest('.divSlide'))
         })
     });
 
