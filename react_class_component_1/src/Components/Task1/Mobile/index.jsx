@@ -11,9 +11,12 @@ export default class Mobile extends Component {
           <img src={require(`${mobImgSrc}`)} alt='mobile' />
         </div>
         <article className={styles.mobileinfo}>
-          <h3 className={styles.mh3}>{mobH3}</h3>
+          {/* <h3 className={styles.mh3}>{mobH3}</h3>
           <h2 className={styles.mh2}>{mobH2}</h2>
-          <h4 className={styles.mh4}>{mobH4}</h4>
+          <h4 className={styles.mh4}>{mobH4}</h4> */}
+          <h3>{mobH3}</h3>
+          <h2>{mobH2}</h2>
+          <h4>{mobH4}</h4>
         </article>
     </section>
     )

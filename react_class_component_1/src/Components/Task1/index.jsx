@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styles from './Content.module.css';
-import Head   from '../Head';
-import Mobile from '../Mobile';
+import styles from './Task1.module.css';
+import Head   from './Head';
+import Mobile from './Mobile';
 
 class mobClass{
   constructor(mobImgSrc, mobH3, mobH2, mobH4, mobIsReverse){
@@ -24,7 +24,7 @@ let mob2 = new mobClass('./mobi2.png'
                        ,'Shop for your favorite meals or drinks and enjoy while doing it.'
                        , true);
 
-export default class Content extends Component {
+export default class Task1 extends Component {
   render() {
     return (
       <div className={styles.content}> 

@@ -21,9 +21,10 @@ section {
     display: flex;
     flex-direction: column;
     width: 480px;
+    align-content: center;
 }
 
-.mh3 {
+.mobileinfo h3 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -33,7 +34,7 @@ section {
     color: #fa4a0c;
 }
 
-.mh2 {
+.mobileinfo h2 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
@@ -43,7 +44,7 @@ section {
     color: #252B42;
 }
 
-.mh4 {
+.mobileinfo  h4 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;

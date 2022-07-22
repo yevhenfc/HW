@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import Content from './Components/Content';
-
+import Task1 from './Components/Task1';
 
 
 export default class App extends Component {
 render() {
     return (
-      <Content />
+      <Task1 />
      )
   }
 }
