@@ -11,10 +11,10 @@ export default class Counter extends Component {
     }
   }
 
-  valueAdd = () => {this.setState((state) => ({value: state.value + state.step}))}
-  valueSub = () => {this.setState((state) => ({value: state.value - state.step}))}
-  stepAdd  = () => {this.setState((state) => ({step: state.step  + 1}))  }
-  stepSub  = () => {this.setState((state) => ({step: state.step  - 1}))  }
+  valueAdd = () => {this.setState((state) => ({value: this.state.value + this.state.step}))}
+  valueSub = () => {this.setState((state) => ({value: this.state.value - this.state.step}))}
+  stepAdd  = () => {this.setState((state) => ({step: this.state.step  + 1}))  }
+  stepSub  = () => {this.setState((state) => ({step: this.state.step  - 1}))  }
 
   render() {
     return (
