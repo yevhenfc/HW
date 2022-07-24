@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.content {
+    max-width: 1440px;
+    background-color: #e5e5e5;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content > h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 36px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 16px;
+}
