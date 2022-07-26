@@ -18,15 +18,15 @@ export default class Counter extends Component {
 
   render() {
     return (
-      <div className={styles.container}>
-        
-        <div className={styles.btnValueContainer}>
+      <div className={styles.counter_container}>
+        <h1>Counter</h1>
+        <div className={styles.btn_counter_container}>
           <p>Value = {this.state.value}</p>
           <button onClick={this.valueAdd} className='btn btnAdd'>Add {this.state.step}</button>
           <button onClick={this.valueSub} className='btn btnSub'>Sub {this.state.step}</button>
         </div>
           
-        <div className={styles.btnStepContainer}>
+        <div className={styles.btn_step_container}>
           <p>Step  = {this.state.step}</p>
           <button onClick={this.stepAdd} className='btn btnAdd'>Add 1</button>
           <button onClick={this.stepSub} className='btn btnSub'>Sub 1</button>          
