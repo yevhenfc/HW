@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+// import Calendar from './Calendar'
 import StopWatch from './StopWatch'
 
 export default class React_state extends Component {
@@ -6,6 +7,8 @@ export default class React_state extends Component {
     return (
       <>
         <StopWatch timeLimit={5}/>
+        <StopWatch />
+        {/* <Calendar /> */}
       </>
     )
   }

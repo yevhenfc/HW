@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import React_class_component from './Components/React_class_component';
-import React_state   from './Components/React_state';
+// import React_class_component from './Components/React_class_component';
+// import React_state   from './Components/React_state';
+import AsyncDataLoading from './Components/AsyncDataLoading';
 
 export default class App extends Component {
 render() {
     return (
       <>
-        <React_class_component />
-        <React_state />
+        {/* <React_class_component /> */}
+        {/* <React_state /> */}
+        <AsyncDataLoading />
       </>
      )
   }
