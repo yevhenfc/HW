@@ -1,0 +1,100 @@
+*{
+    font-size: 20px;
+    --padding: 1vh;
+    margin:0;
+}
+
+.todo_container{
+    width: 100vw;
+    min-height: 100vh;
+    padding: var(--padding);
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.enter_container {
+    margin: var(--padding);
+    width: 100vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#entryField{
+    width: 50vw;
+    height: 5vh;
+    border-radius: var(--padding);
+    border: 1px solid green;
+    font-size: 1vw
+}
+
+button {
+    margin-left: var(--padding);
+    width: 10vw;
+    height: 4vh;
+    border-radius: var(--padding);
+    border: 1px solid green;
+    font-size: 1vw;
+    background-image: linear-gradient(to right, lightgreen 0%, green 100%);
+    transition: 0.3s;
+    background-size: 300% auto;
+    color: white;
+}
+
+button:hover {
+    background-position: 50% 50%;
+}
+
+#tasks{
+    display: flex;
+    position: relative;  
+    flex-wrap: wrap;
+}
+
+#tasks li{
+    width: 50vw;
+    min-height: 15vh;
+    margin: var(--padding);
+    padding: var(--padding);
+    border-radius: var(--padding);
+    background-color: lightgreen;
+    background-image: linear-gradient(to right,lightgreen 0%, green 100%);
+    background-size: 300% auto;
+    border: 1px solid green;
+    position: relative;
+}
+
+.addDate {
+    margin: var(--padding);
+    align-self: center;
+    font-size: 1vw;
+    color: darkgreen;
+    top: var(--padding);
+    left: var(--padding);
+    position: absolute;
+}
+
+.addText{
+    font-size: 1vw;
+    color: darkgreen;
+    margin: var(--padding);
+    word-wrap: break-all;
+    align-self: center;
+    top: var(--padding);
+    left: 150px;
+    position: absolute;
+    display: block;
+    word-wrap: break-word;
+    width: 40vw;
+}
+
+.checkbox{
+    display: block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: var(--padding);
+    right: var(--padding);
+}
