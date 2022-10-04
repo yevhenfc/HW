@@ -15,6 +15,7 @@ addBtn.addEventListener('click', (e) => {
     task.append(addCheckbox());
     tasks.append(task);
     entryField.value = '';
+    funEdit(task);
 })
 
 function addDate() {
@@ -28,6 +29,7 @@ function addDate() {
 function addText() {
     const addText = document.createElement('span');
     addText.classList.add('addText')
+    addText.title = "Double click to edit";
     addText.innerText = entryField.value;
     return addText
 }
@@ -43,3 +45,12 @@ rmBtn.addEventListener('click', (e) => {
     const deleted = document.querySelectorAll(".checkbox[type='checkbox']:checked");
     deleted.forEach( el => console.log(el.parentNode.remove()));
 });
+
+function funEdit(el) {
+    el.addEventListener('dblclick', function(){
+        const content = el.querySelector('.addText');
+        if (content.contentEditable != 'true') {content.contentEditable = 'true'} 
+        else {content.contentEditable = 'false'}
+    })
+    
+}
